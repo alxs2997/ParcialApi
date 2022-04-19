@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Comic;
+use App\Http\Resources\Comic as ComicResource;
 
 class ComicsController extends Controller
 {
     //
-    
+
 }

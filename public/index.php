@@ -53,3 +53,11 @@ $response = $kernel->handle(
 )->send();
 
 $kernel->terminate($request, $response);
+
+
+
+<html lang="en">
+    <header>...</header>
+    <body>
+        <header>
+            <h2 class="text-center text-dark">

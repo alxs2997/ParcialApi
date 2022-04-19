@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class GameSedeer extends Seeder
+class ComicGames extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +15,7 @@ class GameSedeer extends Seeder
     public function run()
     {
         //
-        \App\Models\GameSeeder::factory()->count(50)->create();
+        
     }
 }
+\App\Models\ComicGames::factory()->count(50)->create();

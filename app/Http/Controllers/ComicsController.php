@@ -20,4 +20,11 @@ class ComicsController extends Controller
         $comics=Comic::all();
         return ComicResource::collection($comics);
     }
+    public function show($id)
+    {
+        //get category by id
+        $comics = Comic::findOrFail($id);
+        return new ComicResource($comics);
+
+    }
 }

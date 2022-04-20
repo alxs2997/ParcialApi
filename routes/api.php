@@ -22,5 +22,5 @@ Route::get('comics','App\Http\Controllers\ComicsController@index');
 Route::get('games','App\Http\Controllers\gameController@index');
 
 //obtener Comics
-Route::get('comics/{id}','App\Http\Controllers\ComicsController@show');
+Route::get('comicz/{id}','App\Http\Controllers\ComicsController@show');
 

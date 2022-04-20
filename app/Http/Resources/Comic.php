@@ -23,7 +23,6 @@ class Comic extends JsonResource
             'Description'=>$this->Description,
             'Tipo'=>$this->Tipo,
             'timestamps'=>$this->timestamps,
-
         ];
     }
 }

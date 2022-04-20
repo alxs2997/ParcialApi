@@ -19,3 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('comics','App\Http\Controllers\ComicsController@index');
+Route::get('games','App\Http\Controllers\gameController@index');
+
+//obtener Comics
+Route::get('comics/{id}','App\Http\Controllers\ComicsController@show');
+

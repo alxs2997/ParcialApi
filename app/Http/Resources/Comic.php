@@ -18,9 +18,11 @@ class Comic extends JsonResource
         return[
             'id'=> $this->id,
             'titulo'=>$this->titulo,
+            'clasificacion'=>$this->clasificacion,
             'anio'=>$this->anio,
-            'clasificacion'=>$this->clasificacion,
-            'clasificacion'=>$this->clasificacion,
+            'Description'=>$this->Description,
+            'Tipo'=>$this->Tipo,
+            'timestamps'=>$this->timestamps,
 
         ];
     }

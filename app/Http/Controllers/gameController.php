@@ -23,7 +23,7 @@ class GameController extends Controller
     public function show($id)
     {
         //get category by id
-        $games = Games::findOrFail($id);
+        $games = Game::findOrFail($id);
         return new GameResource($games);
 
     }

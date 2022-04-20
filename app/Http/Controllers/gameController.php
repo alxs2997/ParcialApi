@@ -37,7 +37,7 @@ class GameController extends Controller
         $games = $request->isMethod('put') ? Game::findOrFail($request->id) : new Game;
         $games->id = $request->input('id');
         $games->titulo = $request->input('titulo');
-        $games->Description = $request->input('Description');
+        $games->Descripcion = $request->input('Descripcion');
         $games->clasificacion = $request->input('clasificacion');
         $games->anio = $request->input('anio');
         $games->Tipo = $request->input('Tipo');

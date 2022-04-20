@@ -16,8 +16,15 @@ class GameController extends Controller
      */
     public function index()
     {
-        //get categories
+        //listar juegos
         $games=Game::all();
         return GameResource::collection($games);
+    }
+    public function show($id)
+    {
+        //get category by id
+        $games = Games::findOrFail($id);
+        return new GameResource($games);
+
     }
 }

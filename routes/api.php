@@ -25,3 +25,17 @@ Route::get('games','App\Http\Controllers\gameController@index');
 Route::get('comicz/{id}','App\Http\Controllers\ComicsController@show');
 //obtener Games
 Route::get('gamez/{id}','App\Http\Controllers\gameController@show');
+
+//crear nuevo comic
+Route::post('comicz','App\Http\Controllers\ComicsController@store');
+//actualizar comic
+Route::put('comicz','App\Http\Controllers\ComicsController@store');
+//crear nuevo juego
+Route::post('gamez','App\Http\Controllers\gameController@store');
+//actualizar juego
+Route::put('gamez','App\Http\Controllers\gameController@store');
+
+//eliminar comic
+Route::delete('comicz/{id}','App\Http\Controllers\ComicsController@destroy');
+//eliminar juego
+Route::delete('gamez/{id}','App\Http\Controllers\gameController@destroy');

@@ -22,9 +22,37 @@ class GameController extends Controller
     }
     public function show($id)
     {
-        //get category by id
+        //get games by id
         $games = Games::findOrFail($id);
         return new GameResource($games);
 
+    }
+    public function store(Request $request)
+    {
+        //guardar o actualizar
+        $games = $request->isMethod('put') ? Game::findOrFail($request->id) : new Game;
+        $games->id = $request->input('id');
+        $games->titulo = $request->input('titulo');
+        $games->Description = $request->input('Description');
+        $games->clasificacion = $request->input('clasificacion');
+        $games->anio = $request->input('anio');
+        $games->Tipo = $request->input('Tipo');
+
+
+
+        if($games->save()){
+            return new GameResource($games);
+
+        }
+
+    }
+    public function destroy($id)
+    {
+        //borrar juego
+        $games = Game::findOrFail($id);
+
+        if($games->delete()){
+            return new GameResource($games);
+        }
     }
 }

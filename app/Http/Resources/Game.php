@@ -20,7 +20,7 @@ class Game extends JsonResource
             'titulo'=>$this->titulo,
             'clasificacion'=>$this->clasificacion,
             'anio'=>$this->anio,
-            'Description'=>$this->Description,
+            'Descripcion'=>$this->Descripcion,
             'Tipo'=>$this->Tipo,
             'timestamps'=>$this->timestamps,
         ];

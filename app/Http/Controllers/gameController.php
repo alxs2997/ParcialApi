@@ -3,35 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Game;
+use App\Http\Resources\Game as GameResource;
 
-class gameController extends Controller
+class GameController extends Controller
 {
     //
-    public function store(Request $request)
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-
-        //save or update
-
-        $game = $request->isMethod('put') ? Category::findOrFail($request->id) : new Category;
-
-        $game->id = $request->input('id');
-
-        $game->title = $request->input('title');
-
-        $game->description = $request->input('description');
-
-
-
-        if($game->save()){
-
-            return new CategoryResource($game);
-
-
-
-        }
-
-
-
+        //get categories
+        $games=Game::all();
+        return GameResource::collection($games);
     }
 }

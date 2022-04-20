@@ -56,8 +56,3 @@ $kernel->terminate($request, $response);
 
 
 
-<html lang="en">
-    <header>...</header>
-    <body>
-        <header>
-            <h2 class="text-center text-dark">

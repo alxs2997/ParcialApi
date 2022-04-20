@@ -16,15 +16,15 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        //get categories
+        //get comits
         $comics=Comic::all();
         return ComicResource::collection($comics);
     }
     public function show($id)
     {
-        //get category by id
+        //get comics por id
         $comics = Comic::findOrFail($id);
         return new ComicResource($comics);
-
     }
+
 }

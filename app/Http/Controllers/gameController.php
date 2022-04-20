@@ -24,7 +24,7 @@ class GameController extends Controller
     {
 
         //get games by id
-        $games = Games::findOrFail($id);
+        $games = Game::findOrFail($id);
         //get category by id
         $games = Game::findOrFail($id);
 

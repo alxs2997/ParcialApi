@@ -9,7 +9,7 @@
                 </li>
                 |
                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../views/Dashboard0">Juegos</a>
+                    <a class="nav-link" aria-current="page" href="/dashboard0">Juegos</a>
                 </li>
             </ul>    
         </b-navbar>

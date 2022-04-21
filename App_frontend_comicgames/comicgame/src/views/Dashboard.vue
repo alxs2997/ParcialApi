@@ -66,9 +66,9 @@ export default{
     },
     mounted:function(){
         let dir = "http://localhost:8000/api/comics";
-        axios.get(dir).then(data=>{
-            //console.log(data);
-            this.lista = data.data;
+        axios.get(dir).then(d=>{
+            console.log(d.data);
+            this.lista = d.data.data;
         })
     }
 }

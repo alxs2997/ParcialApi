@@ -22,20 +22,20 @@ Route::get('comics','App\Http\Controllers\ComicsController@index');
 Route::get('games','App\Http\Controllers\gameController@index');
 
 //obtener Comics
-Route::get('comicz/{id}','App\Http\Controllers\ComicsController@show');
+Route::get('comics/{id}','App\Http\Controllers\ComicsController@show');
 //obtener Games
-Route::get('gamez/{id}','App\Http\Controllers\gameController@show');
+Route::get('games/{id}','App\Http\Controllers\gameController@show');
 
 //crear nuevo comic
-Route::post('comicz','App\Http\Controllers\ComicsController@store');
+Route::post('comics','App\Http\Controllers\ComicsController@store');
 //actualizar comic
-Route::put('comicz','App\Http\Controllers\ComicsController@store');
+Route::put('comics','App\Http\Controllers\ComicsController@store');
 //crear nuevo juego
-Route::post('gamez','App\Http\Controllers\gameController@store');
+Route::post('games','App\Http\Controllers\gameController@store');
 //actualizar juego
-Route::put('gamez','App\Http\Controllers\gameController@store');
+Route::put('games','App\Http\Controllers\gameController@store');
 
 //eliminar comic
-Route::delete('comicz/{id}','App\Http\Controllers\ComicsController@destroy');
+Route::delete('comics/{id}','App\Http\Controllers\ComicsController@destroy');
 //eliminar juego
-Route::delete('gamez/{id}','App\Http\Controllers\gameController@destroy');
+Route::delete('games/{id}','App\Http\Controllers\gameController@destroy');

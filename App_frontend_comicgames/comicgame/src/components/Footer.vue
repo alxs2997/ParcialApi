@@ -1,14 +1,14 @@
 <template>
     <div>
         <footer>
-            Derechos Reservador | UGB.edu.sv
+            Derechos Reservados | UGB.edu.sv
             </footer>
     </div>
 </template>
 <style scoped>
 footer{
     position: fixed;
-    height: 100px;
+    height: 55px;
     bottom: 0;
     width: 100%;
     background-color: black;

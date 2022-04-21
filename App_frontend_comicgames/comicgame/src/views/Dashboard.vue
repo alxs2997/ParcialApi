@@ -2,9 +2,9 @@
     <div class="dashboard">
         <Header/>
        <div class="container">
-           <table class="table table-hover">
+           <table class="table table-dark table-hover">
   <thead >
-    <tr>
+    <tr class="table-active">
         <th scope="col">ID</th>
         <th scope="col">TITULO</th>
         <th scope="col">CLASIFICACION</th>

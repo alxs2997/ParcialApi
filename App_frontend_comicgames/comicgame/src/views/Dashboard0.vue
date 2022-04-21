@@ -21,13 +21,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr v-for="comics in lista" :key="comics.id">
-      <th scope="row">{{ comics.id }}</th>
-        <td>{{ comics.titulo }}</td>
-        <td>{{ comics.clasificacion }}</td>
-        <td>{{ comics.anio }}</td>
-        <td>{{ comics.Descripcion }}</td>
-        <td>{{ comics.Tipo }}</td>
+    <tr v-for="games in lista" :key="games.id">
+      <th scope="row">{{ games.id }}</th>
+        <td>{{ games.titulo }}</td>
+        <td>{{ games.clasificacion }}</td>
+        <td>{{ games.anio }}</td>
+        <td>{{ games.Descripcion }}</td>
+        <td>{{ games.Tipo }}</td>
         <td>
             <a href="" title="show">
                 <i class="fas fa-eye text-success fa-lg"></i>
@@ -65,10 +65,10 @@ export default{
         Footer
     },
     mounted:function(){
-        let dir = "http://localhost:8000/api/comics";
-        axios.get(dir).then(data=>{
-            //console.log(data);
-            this.lista = data.data;
+        let dir = "http://localhost:8000/api/games";
+        axios.get(dir).then(d=>{
+            console.log(d.data);
+            this.lista = d.data.data;
         })
     }
 }

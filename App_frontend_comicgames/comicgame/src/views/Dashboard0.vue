@@ -7,21 +7,21 @@
                 </div>
                 <br>
        <div class="container">
+           <h3>De clic sobre el dato que quiere ver, modificar o eliminar.</h3>
            <table class="table table-dark table-hover">
   <thead >
     <tr class="table-active">
-        <th scope="col">ID</th>
+        <th scope="col text-center">ID</th>
         <th scope="col">TITULO</th>
-        <th scope="col">CLASIFICACION</th>
+        <th scope="col" width="250px">CLASIFICACION</th>
         <th scope="col">AÑO</th>
         <th scope="col">DESCRIPCION</th>
         <th scope="col">TIPO</th>
-        <th scope="col">ACCIONES</th>
       
     </tr>
   </thead>
   <tbody>
-    <tr v-for="games in lista" :key="games.id">
+    <tr v-for="games in lista" :key="games.id" v-on:click="editar(games.id)">
       <th scope="row">{{ games.id }}</th>
         <td>{{ games.titulo }}</td>
         <td>{{ games.clasificacion }}</td>
@@ -64,6 +64,14 @@ export default{
         Header,
         Footer
     },
+     methods:{
+        editar(id){
+            this.$router.push('/edita0/' + id);
+        },
+        nuevo(){
+            this.$router.push('/nuevo');
+        }
+    },    
     mounted:function(){
         let dir = "http://localhost:8000/api/games";
         axios.get(dir).then(d=>{

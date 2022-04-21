@@ -1,9 +1,9 @@
 <template>
-    <div class="dashboard">
+    <div class="dashboard0">
         <Header/>
         <div class="text-center">
 
-                    <a href="#" class="btn btn-success">Nuevo Comic <i class="fas fa-forward"></i></a>
+                    <a href="#" class="btn btn-success">Nuevo Juego <i class="fas fa-forward"></i></a>
                 </div>
                 <br>
        <div class="container">
@@ -26,7 +26,7 @@
         <td>{{ comics.titulo }}</td>
         <td>{{ comics.clasificacion }}</td>
         <td>{{ comics.anio }}</td>
-        <td>{{ comics.Description }}</td>
+        <td>{{ comics.Descripcion }}</td>
         <td>{{ comics.Tipo }}</td>
         <td>
             <a href="" title="show">
@@ -53,7 +53,7 @@ import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 import axios from 'axios'
 export default{
-    name:"Dashboard",
+    name:"Dashboard0",
     data(){
         return{
             lista:null,

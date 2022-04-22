@@ -28,18 +28,6 @@
         <td>{{ games.anio }}</td>
         <td>{{ games.Descripcion }}</td>
         <td>{{ games.Tipo }}</td>
-        <td>
-            <a href="" title="show">
-                <i class="fas fa-eye text-success fa-lg"></i>
-            </a>
-            <a href="">
-                <i class="fas fa-edit fa-lg"></i>
-            </a>
-            
-            <button type="submit" title="delete" style="border: none; background-color:transparent;">
-                <i class="fas fa-trash text-danger"></i>
-            </button>
-        </td>
     </tr>
   </tbody>
 </table>

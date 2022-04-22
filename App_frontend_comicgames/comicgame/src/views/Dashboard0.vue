@@ -1,11 +1,9 @@
 <template>
     <div class="dashboard0">
         <Header/>
-        <div class="text-center">
-
-                    <a href="#" class="btn btn-success">Nuevo Juego <i class="fas fa-forward"></i></a>
-                </div>
-                <br>
+         <button class="btn btn-warning" v-on:click="nuevo()">Añadir otro Juego</button>
+            <br>
+            <br>
        <div class="container">
            <h3>De clic sobre el dato que quiere ver, modificar o eliminar.</h3>
            <table class="table table-dark table-hover">
@@ -57,7 +55,7 @@ export default{
             this.$router.push('/edita0/' + id);
         },
         nuevo(){
-            this.$router.push('/nuevo');
+            this.$router.push('/nuev0');
         }
     },    
     mounted:function(){

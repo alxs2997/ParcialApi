@@ -1,7 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Dashboard from '../views/Dashboard.vue';
-import Dashboar0 from '../views/Dashboard0.vue'
+import Dashboar0 from '../views/Dashboard0.vue';
+
+//para comics
+import Editar from '../views/Editar.vue';
+import Nuevo from '../views/Nuevo.vue';
+
+//para games
+import Edita0 from '../views/Edita0.vue';
+
 
 Vue.use(VueRouter)
 
@@ -15,7 +23,22 @@ const routes = [
     path: '/dashboard0',
     name: 'Dashboard0',
     component: Dashboar0
-  }
+  },
+  {
+    path: '/editar/:id',
+    name: 'Editar',
+    component: Editar
+  },
+  {
+    path: '/nuevo',
+    name: 'Nuevo',
+    component: Nuevo
+  },
+  {
+    path: '/edita0/:id',
+    name: 'Edita0',
+    component: Edita0
+  },
   
 ]
 

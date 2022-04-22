@@ -1,12 +1,12 @@
 <template>
     <div class="dashboard">
+        
         <Header/>
-        <div class="text-center">
-
-                    <a href="#" class="btn btn-success">Nuevo Comic <i class="fas fa-forward"></i></a>
-                </div>
-                <br>
+        <h3>De clic sobre el dato que quiere ver, modificar o eliminar.</h3>
        <div class="container">
+            <button class="btn btn-warning" v-on:click="nuevo()">Añadir otro Comic</button>
+            <br>
+            <br>
            <table class="table table-dark table-hover">
   <thead >
     <tr class="table-active">
@@ -16,30 +16,16 @@
         <th scope="col">AÑO</th>
         <th scope="col">DESCRIPCION</th>
         <th scope="col">TIPO</th>
-        <th scope="col">ACCIONES</th>
-      
     </tr>
   </thead>
   <tbody>
-    <tr v-for="comics in lista" :key="comics.id">
+    <tr v-for="comics in lista" :key="comics.id" v-on:click="editar(comics.id)">
       <th scope="row">{{ comics.id }}</th>
         <td>{{ comics.titulo }}</td>
-        <td>{{ comics.clasificacion }}</td>
+        <td width="250px">{{ comics.clasificacion }}</td>
         <td>{{ comics.anio }}</td>
         <td>{{ comics.Description }}</td>
         <td>{{ comics.Tipo }}</td>
-        <td>
-            <a href="" title="show">
-                <i class="fas fa-eye text-success fa-lg"></i>
-            </a>
-            <a href="">
-                <i class="fas fa-edit fa-lg"></i>
-            </a>
-            
-            <button type="submit" title="delete" style="border: none; background-color:transparent;">
-                <i class="fas fa-trash text-danger"></i>
-            </button>
-        </td>
     </tr>
   </tbody>
 </table>
@@ -51,7 +37,7 @@
 <script>
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
-import axios from 'axios'
+import axios from 'axios';
 export default{
     name:"Dashboard",
     data(){
@@ -64,6 +50,15 @@ export default{
         Header,
         Footer
     },
+    methods:{
+        editar(id){
+            this.$router.push('/editar/' + id);
+        },
+        nuevo(){
+            this.$router.push('/nuevo');
+        }
+    },    
+
     mounted:function(){
         let dir = "http://localhost:8000/api/comics";
         axios.get(dir).then(d=>{
@@ -72,7 +67,6 @@ export default{
         })
     }
 }
-   
 
 </script>
 

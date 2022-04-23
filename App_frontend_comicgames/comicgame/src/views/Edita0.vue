@@ -33,11 +33,11 @@
                         <input type="text" name="tipo" class="form-control" id="Tipo" v-model="form.Tipo">
                     </div>
                 </div>
-
+                    <br>
                 <div class="form-group">
-                    <button type="button" class="btn btn-danger margen" v-on:click="eliminar()">Eliminar</button>
-                    <button type="button" class="btn btn-primary margen" v-on:click="editar()">Editar</button>
-                    <button type="button" class="btn btn-dark margen" v-on:click="salir()">Salir</button>
+                    <b-button pill variant="danger" v-on:click="eliminar()">Eliminar</b-button>
+                    <b-button pill variant="primary" v-on:click="editar()">Editar</b-button>
+                    <b-button pill variant="secondary" v-on:click="salir()">Salir</b-button>
                 </div>
             </form>
         </div>
@@ -89,7 +89,7 @@ export default({
             axios.delete("http://localhost:8000/api/games/" + this.form.id)
             .then(datos=>{
                 console.log(datos);
-                 this.$router.push("/");
+                 this.$router.push("/dashboard0");
             });
         }
    },

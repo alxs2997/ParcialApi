@@ -19,10 +19,10 @@ class GameFactory extends Factory
         return [
             //
             'titulo' => $this->faker->text(20),
-            'Description' => $this->faker->text(50),
-            'clasificacion' => $this->faker->text(10),
-            'anio' => $this->faker->text(15),
-            'Tipo' => $this->faker->text(50),
+            'Description' => $this->faker->text(500),
+            'clasificacion' => $this->faker->text(5),
+            'anio' => $this->faker->text(4),
+            'Tipo' => $this->faker->text(10),
         ];
     }
 }

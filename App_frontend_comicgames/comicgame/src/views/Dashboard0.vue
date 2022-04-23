@@ -1,15 +1,14 @@
 <template>
     <div class="dashboard0">
         <Header/>
-        <div class="text-center">
-
-                    <a href="#" class="btn btn-success">Nuevo Juego <i class="fas fa-forward"></i></a>
-                </div>
-                <br>
+                <h3>De clic sobre el dato que quiere ver, modificar o eliminar.</h3>
+                <b-button pill variant="info" v-on:click="nuevo()">Añadir otro Juego</b-button>
+            <br>
+            <br>
        <div class="container">
-           <h3>De clic sobre el dato que quiere ver, modificar o eliminar.</h3>
-           <table class="table table-dark table-hover">
-  <thead >
+           
+           <table class="table table-hover">
+  <thead class="thead table-dark" >
     <tr class="table-active">
         <th scope="col text-center">ID</th>
         <th scope="col">TITULO</th>
@@ -57,7 +56,7 @@ export default{
             this.$router.push('/edita0/' + id);
         },
         nuevo(){
-            this.$router.push('/nuevo');
+            this.$router.push('/nuev0');
         }
     },    
     mounted:function(){

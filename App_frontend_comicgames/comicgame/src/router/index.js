@@ -9,6 +9,7 @@ import Nuevo from '../views/Nuevo.vue';
 
 //para games
 import Edita0 from '../views/Edita0.vue';
+import Nuev0 from '../views/Nuev0.vue';
 
 
 Vue.use(VueRouter)
@@ -38,7 +39,12 @@ const routes = [
     path: '/edita0/:id',
     name: 'Edita0',
     component: Edita0
+  },{
+    path: '/nuev0',
+    name: 'Nuev0',
+    component: Nuev0
   },
+
   
 ]
 
